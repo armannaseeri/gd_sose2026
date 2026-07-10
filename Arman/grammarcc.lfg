@@ -13,8 +13,6 @@
 
 DEMO   ENGLISH   RULES (1.0)
 
-"Verb-final, free order among NPs and PPs.
- The comma is the SHUFFLE operator; the outer ( ) keeps V clause-final."
 
    S --> ( ( NP: @GF )*,
            ( PP: @GF )* )
@@ -30,8 +28,6 @@ DEMO   ENGLISH   RULES (1.0)
 
 DEMO   ENGLISH   TEMPLATES (1.0)
 
-"===== reused from grammar8 (argument structure is language-independent) ====="
-"    simplified: no @PASS, no @DAT-SHIFT, no sem/nosem PP typing            "
 
 INTRANS(P)   = (^ PRED) = 'P<(^ SUBJ)>'.
 
@@ -44,7 +40,6 @@ DITRANS(P)   = (^ PRED) = 'P<(^ SUBJ)(^ OBJ)(^ OBL)>'.
 PREP(P)      = (^ PRED)  = 'P<(^ OBJ)>'
                (^ PFORM) = P.
 
-"===== new for this exercise: free grammatical-function assignment ====="
 
 GF = { (^ SUBJ) = !
      | (^ OBJ)  = !
@@ -70,7 +65,7 @@ bobo   N * @(N-CASE baboon).
 
 "VERBS  (verb-final)"
 
-taotao V * @(OPT-TRANS eat).     "optionally transitive -> one-NP sentences parse"
+taotao V * @(OPT-TRANS eat).     
 guagua V * @(DITRANS give).
 
 "PREPOSITIONS"
